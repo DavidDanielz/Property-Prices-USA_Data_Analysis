@@ -39,6 +39,13 @@ Based on this, the value was **not removed** or adjusted but marked as a valid o
 
 Based on validation, decide on the approach:
 
+Example SQL Query to Correct the Outlier:
+```
+UPDATE real_estate_metrics
+SET mortgage_as_percentage_of_income = corrected_value
+WHERE rank = 1 AND city = 'Santa Barbara, CA';
+```
+
     If Valid: Keep the outlier if it represents real and important data.
     If Invalid: Correct or remove the outlier if it's a data entry error.
 
