@@ -3,6 +3,7 @@ This project analyzes property prices across the US, focusing on regional cost-o
 
 
 ```
+-- Check for Outliers
 SELECT *
 FROM real_estate_metrics
 WHERE price_to_income_ratio > 20 -- Possible Outlier
